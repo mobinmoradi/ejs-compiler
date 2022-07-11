@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "handlebars": "^4.7.7"
+    "ejs": "^3.1.8"
   }
 }

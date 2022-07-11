@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'Shabnam';
+            src: url('./fonts/Shabnam-Medium.woff2') format('woff2'),
+                url('./fonts/Shabnam-Medium.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        body {
+            background-color: #003743;
+            font-family: 'Shabnam';
+            padding: 24px;
+        }
+
+        div {
+            direction: rtl;
+            width: 90%;
+            text-align: center;
+            background: #9FB4B8;
+            margin: 20px auto 0 auto;
+            padding: 15px;
+            border-radius: 12px;
+            max-width: 800px;
+        }
+
+        a {
+            width: max-content;
+            background-color: #2563EB;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: white;
+            margin: 1rem 0;
+        }
+
+        a:hover {
+            background-color: #1d50c0;
+        }
+
+        .flex {
+            display: flex;
+            flex-direction: column;
+            gap: .7rem;
+            align-items: center;
+        }
+
+        img {
+            margin: 32px auto;
+            width: 60%;
+            max-width: 450px;
+        }
+
+        table {
+            direction: ltr;
+            border-collapse: collapse;
+            width: 70%;
+            border-radius: 18px;
+            border: 4px solid red;
+            margin-bottom: 24px;
+            
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            padding: 6px;
+
+        }
+        .bg-green{
+            background-color: rgba(150, 182, 150, 0.836);
+        }
+        .bg-red{
+            background-color: rgba(179, 148, 147, 0.836);
+        }
+        .bg-grey{
+            background-color: rgba(214, 214, 214, 0.336);
+        }
+    </style>
+</head>
+
+<body class="flex">
+    <div>
+        <h1>سامانه پایش ایمیل ویرا</h1>
+    </div>
+    <div class="flex">
+        <h2>وبسایت <%=url%> از دسترس خارج شد!</h2>
+
+        <table>
+            <tr class="bg-grey">
+                <th></th>
+                <th>status</th>
+                <th>date</th>
+            </tr>
+            <tr class="bg-red">
+                <td>now</td>
+                <td><%=now.status%></td>
+                <td><%=now.date%></td>
+            </tr>
+            <tr class="bg-green">
+                <td >past</td>
+                <td><%=past.status%></td>
+                <td><%=past.date%></td>
+            </tr>
+        </table>
+        <p>جهت دریافت اطلاعات بیشتر وارد سامانه شوید:</p>
+        <a href="#" target="_blank">لینک ورود به سامانه</a>
+    </div>
+    <img src="../img/apa.png">
+
+
+
+</body>
+
+</html>
